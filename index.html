@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Satisfação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <img src="logo.png" alt="Logo da Empresa" class="logo">
+        <h1>Questionário de Satisfação</h1>
+        <form id="survey-form" onsubmit="submitForm(event)">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+            <label for="satisfacao">Como você avalia nossa empresa?</label>
+            <select id="satisfacao" name="satisfacao" required>
+                <option value="muito_bom">Muito Bom</option>
+                <option value="bom">Bom</option>
+                <option value="regular">Regular</option>
+                <option value="ruim">Ruim</option>
+                <option value="muito_ruim">Muito Ruim</option>
+            </select>
+
+            <label for="melhorias">O que podemos melhorar?</label>
+            <textarea id="melhorias" name="melhorias" rows="4" placeholder="Deixe suas sugestões" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Pop-up de feedback -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Obrigado pelo seu feedback!</h2>
+            <p>Seu feedback foi enviado com sucesso. Agradecemos a sua opinião!</p>
+            <button onclick="closePopup()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
