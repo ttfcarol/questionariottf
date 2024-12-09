@@ -15,7 +15,7 @@ function submitForm(event) {
     formData.append('melhorias', melhorias);
 
     // Envia os dados para o Google Apps Script
-    fetch('https://script.google.com/macros/s/AKfycbx2JDz8SgBr54RVInlXtVkAie4OuEXSMOibV1LCDYPr/dev', {
+    fetch('https://script.google.com/macros/s/AKfycby2L3J7To5cVQbSn_q0kKMRfJe60yLYVrdKfL9njoY6Gt-zVRWpCC5j_k9DhHLEdnXN7Q/exec', {
         method: 'POST',
         body: formData
     })
@@ -28,15 +28,11 @@ function submitForm(event) {
     .catch(error => console.error('Erro:', error));
 }
 
-function submitForm(event) {
-    event.preventDefault(); // Impede o envio tradicional do formulário
-
-    // Exibe o pop-up
-    document.getElementById('popup').style.display = 'flex';
+function showPopup() {
+    document.getElementById("survey-form").style.display = "none"; // Esconde o formulário
+    document.getElementById("popup").style.display = "flex"; // Exibe o pop-up
 }
 
 function closePopup() {
-    // Fecha o pop-up
-    document.getElementById('popup').style.display = 'none';
+    document.getElementById("popup").style.display = "none"; // Fecha o pop-up
 }
-
