@@ -28,11 +28,14 @@ function submitForm(event) {
     .catch(error => console.error('Erro:', error));
 }
 
-function showPopup() {
-    document.getElementById("survey-form").style.display = "none"; // Esconde o formulário
-    document.getElementById("popup").style.display = "flex"; // Exibe o pop-up
+function submitForm(event) {
+    event.preventDefault(); // Impede o envio tradicional do formulário
+
+    // Exibe o pop-up
+    document.getElementById('popup').style.display = 'flex';
 }
 
 function closePopup() {
-    document.getElementById("popup").style.display = "none"; // Fecha o pop-up
+    // Fecha o pop-up
+    document.getElementById('popup').style.display = 'none';
 }
